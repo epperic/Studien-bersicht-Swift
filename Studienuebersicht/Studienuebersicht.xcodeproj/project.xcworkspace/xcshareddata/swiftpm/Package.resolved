@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "SwiftDataTables",
+        "repositoryURL": "https://github.com/pavankataria/SwiftDataTables",
+        "state": {
+          "branch": null,
+          "revision": "be9eb4e13ec0fc7dc1eb4701ceb59135a361e679",
+          "version": "0.8.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
