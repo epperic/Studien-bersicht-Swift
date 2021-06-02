@@ -65,10 +65,9 @@ struct SemesterView: View {
         collection.module.move(fromOffsets: source, toOffset: destination)
     }
     
-    func transformData(){
+    private func transformData(){
         /*ForEach(collection.module, id: \.Id){
             modul in
-            
         }*/
         //Hier muss ich die collection in sections splitten
     }

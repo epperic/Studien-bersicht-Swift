@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:StudienuebersichtInfrastructure">
+   </FileRef>
+   <FileRef
+      location = "group:StudienuebersichtCore">
+   </FileRef>
+   <FileRef
+      location = "container:Studienuebersicht/Studienuebersicht.xcodeproj">
+   </FileRef>
+</Workspace>

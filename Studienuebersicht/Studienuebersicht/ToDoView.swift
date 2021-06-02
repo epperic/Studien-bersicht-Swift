@@ -11,7 +11,7 @@ struct ToDoView: View {
     @EnvironmentObject var collection : CollectionViewModel
     @State private var toDoList : [ModulViewModel] = []
     @State private var optionIndex = 0
-        var options = ["1. Semester", "2. Semester", "3. Semester", "4. Semester", "5. Semester", "6. Semester", "7. Semester", "8. Semester"]
+    var options = ["1. Semester", "2. Semester", "3. Semester", "4. Semester", "5. Semester", "6. Semester", "7. Semester", "8. Semester"]
 
     var body: some View{
         NavigationView{
