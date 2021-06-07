@@ -12,17 +12,8 @@ struct LeistungenView: View {
     var body: some View{
         NavigationView{
             VStack{
-                LeistungenHeader(sumECTS: 50, avgNote: 1.7)
-                List{
-                    ForEach(collection.module, id: \.Id){
-                        modul in
-                        LeistungRow(semester: modul.Semester, modul: modul.Modulname, ects: modul.ECTS, note: modul.Note)
-                    }
-                }
+                LeistungenGrid(module: collection.module, sumECTS: collection.calcECTS(), avgNote: collection.calcAvgNote(modulliste: collection.module))
             }.navigationTitle("Leistungen")
-        }.onAppear{transformData()}
-    }
-    func transformData(){
-        
+        }
     }
 }

@@ -14,7 +14,12 @@
 		5A395CDA265D462300BDA632 /* ModulViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A395CD9265D462300BDA632 /* ModulViewModel.swift */; };
 		5A395CDC265D466E00BDA632 /* ModulRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A395CDB265D466E00BDA632 /* ModulRow.swift */; };
 		5A395CDE265D4DCD00BDA632 /* CollectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A395CDD265D4DCD00BDA632 /* CollectionViewModel.swift */; };
-		5A7BFF8B265E922400B7F307 /* ModulHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFF8A265E922400B7F307 /* ModulHeader.swift */; };
+		5A496EA3266B74CD008175BA /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EA2266B74CD008175BA /* FirebaseAPI.swift */; };
+		5A496EA4266B74CD008175BA /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EA2266B74CD008175BA /* FirebaseAPI.swift */; };
+		5A496EA5266B74CD008175BA /* FirebaseAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EA2266B74CD008175BA /* FirebaseAPI.swift */; };
+		5A496EAC266E5D71008175BA /* ModulGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAB266E5D71008175BA /* ModulGrid.swift */; };
+		5A496EAD266E5D71008175BA /* ModulGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAB266E5D71008175BA /* ModulGrid.swift */; };
+		5A496EAE266E5D71008175BA /* ModulGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAB266E5D71008175BA /* ModulGrid.swift */; };
 		5A7BFF8D265EA4DF00B7F307 /* EditModulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFF8C265EA4DF00B7F307 /* EditModulView.swift */; };
 		5A7BFF8F265EBC4100B7F307 /* AddModulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFF8E265EBC4100B7F307 /* AddModulView.swift */; };
 		5A7BFF922665591100B7F307 /* SwiftDataTables in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7BFF912665591100B7F307 /* SwiftDataTables */; };
@@ -61,7 +66,8 @@
 		5A395CD9265D462300BDA632 /* ModulViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulViewModel.swift; sourceTree = "<group>"; };
 		5A395CDB265D466E00BDA632 /* ModulRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulRow.swift; sourceTree = "<group>"; };
 		5A395CDD265D4DCD00BDA632 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
-		5A7BFF8A265E922400B7F307 /* ModulHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulHeader.swift; sourceTree = "<group>"; };
+		5A496EA2266B74CD008175BA /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
+		5A496EAB266E5D71008175BA /* ModulGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulGrid.swift; sourceTree = "<group>"; };
 		5A7BFF8C265EA4DF00B7F307 /* EditModulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModulView.swift; sourceTree = "<group>"; };
 		5A7BFF8E265EBC4100B7F307 /* AddModulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModulView.swift; sourceTree = "<group>"; };
 		5A86D6A82667BB8C005ECA97 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -110,6 +116,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A496EA6266B78CC008175BA /* StudienuebersichtInfrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				5A496EA2266B74CD008175BA /* FirebaseAPI.swift */,
+			);
+			path = StudienuebersichtInfrastructure;
+			sourceTree = "<group>";
+		};
 		5AB8DE8A2655605F00AB90A8 = {
 			isa = PBXGroup;
 			children = (
@@ -133,6 +147,7 @@
 		5AB8DE952655605F00AB90A8 /* Studienuebersicht */ = {
 			isa = PBXGroup;
 			children = (
+				5A496EA6266B78CC008175BA /* StudienuebersichtInfrastructure */,
 				5AB8DE962655605F00AB90A8 /* StudienuebersichtApp.swift */,
 				5A86D6AC2667BCCD005ECA97 /* AppDelegate.swift */,
 				5AB8DE982655605F00AB90A8 /* ContentView.swift */,
@@ -144,8 +159,8 @@
 				5A7BFF8C265EA4DF00B7F307 /* EditModulView.swift */,
 				5A395CD9265D462300BDA632 /* ModulViewModel.swift */,
 				5A395CDD265D4DCD00BDA632 /* CollectionViewModel.swift */,
-				5A7BFF8A265E922400B7F307 /* ModulHeader.swift */,
 				5A395CDB265D466E00BDA632 /* ModulRow.swift */,
+				5A496EAB266E5D71008175BA /* ModulGrid.swift */,
 				5AB8DE9A2655606000AB90A8 /* Assets.xcassets */,
 				5AB8DE9F2655606000AB90A8 /* Info.plist */,
 				5A86D6A82667BB8C005ECA97 /* GoogleService-Info.plist */,
@@ -333,9 +348,10 @@
 				5A7BFF8D265EA4DF00B7F307 /* EditModulView.swift in Sources */,
 				5A86D6AD2667BCCD005ECA97 /* AppDelegate.swift in Sources */,
 				5A395CDE265D4DCD00BDA632 /* CollectionViewModel.swift in Sources */,
+				5A496EAC266E5D71008175BA /* ModulGrid.swift in Sources */,
 				5A1A1D9126557654008DFE4D /* ToDoView.swift in Sources */,
-				5A7BFF8B265E922400B7F307 /* ModulHeader.swift in Sources */,
 				5AB8DE972655605F00AB90A8 /* StudienuebersichtApp.swift in Sources */,
+				5A496EA3266B74CD008175BA /* FirebaseAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -344,6 +360,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A86D6AE2667BCCD005ECA97 /* AppDelegate.swift in Sources */,
+				5A496EAD266E5D71008175BA /* ModulGrid.swift in Sources */,
+				5A496EA4266B74CD008175BA /* FirebaseAPI.swift in Sources */,
 				5AB8DEA92655606000AB90A8 /* StudienuebersichtTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,6 +371,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A86D6AF2667BCCD005ECA97 /* AppDelegate.swift in Sources */,
+				5A496EAE266E5D71008175BA /* ModulGrid.swift in Sources */,
+				5A496EA5266B74CD008175BA /* FirebaseAPI.swift in Sources */,
 				5AB8DEB42655606000AB90A8 /* StudienuebersichtUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

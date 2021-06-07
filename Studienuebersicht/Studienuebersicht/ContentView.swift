@@ -37,22 +37,24 @@ struct ContentView: View {
                     Text("To-Do")
                 }
         }.onAppear{
-            MockloadData()
+            loadData()
         }
     }
     
-    func MockloadData(){
-        collectionViewModel.module = [
-            ModulViewModel(Id: "1", Modulname: "Mathematik I", Professor: "Ponick", ECTS: 6, Note: 1.3, Semester: 1),
-            ModulViewModel(Id: "2", Modulname: "Personal Skills I", Professor: "Grewe", ECTS: 3, Note: 1.7, Semester: 1),
-            ModulViewModel(Id: "3", Modulname: "Grundlagen der Informatik I", Professor: "Stuckenholz", ECTS: 8, Note: 2.5, Semester: 1),
-            ModulViewModel(Id: "4", Modulname: "Mathematik II", Professor: "Ponick", ECTS: 5, Note: 4.0, Semester: 2),
-            ModulViewModel(Id: "5", Modulname: "Personal Skills II", Professor: "Grewe", ECTS: 3, Note: 1.7, Semester: 2),
-            ModulViewModel(Id: "6", Modulname: "Grundlagen der Informatik II", Professor: "Stuckenholz", ECTS: 8, Note: 2.0, Semester: 2),
-            ModulViewModel(Id: "7", Modulname: "Embedded Systems", Professor: "Pelzl", ECTS: 8, Note: 1.7, Semester: 3),
-            ModulViewModel(Id: "8", Modulname: "Personal Skills III", Professor: "Klein", ECTS: 3, Note: 1.4, Semester: 3),
-            ModulViewModel(Id: "9", Modulname: "Praktische Informatik", Professor: "Stuckenholz", ECTS: 5, Note: 1.3, Semester: 3)
-        ]
+    func loadData(){
+        let api = FirebaseAPI()
+        api.fetchData(completion: {
+            switch $0 {
+            case let .success(items):
+                collectionViewModel.module = items
+                splitsemesters()
+            case let .failure(error): debugPrint(error)
+            }
+        })
+    }
+    
+    private func splitsemesters(){
+        collectionViewModel.splitSemesters()
     }
 }
 

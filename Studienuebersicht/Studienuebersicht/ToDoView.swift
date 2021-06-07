@@ -11,8 +11,8 @@ struct ToDoView: View {
     @EnvironmentObject var collection : CollectionViewModel
     @State private var toDoList : [ModulViewModel] = []
     @State private var optionIndex = 0
-    var options = ["1. Semester", "2. Semester", "3. Semester", "4. Semester", "5. Semester", "6. Semester", "7. Semester", "8. Semester"]
-
+    let options = ["1. Semester", "2. Semester", "3. Semester", "4. Semester", "5. Semester", "6. Semester", "7. Semester", "8. Semester"]
+    
     var body: some View{
         NavigationView{
             VStack{
@@ -26,18 +26,14 @@ struct ToDoView: View {
                             transformData()
                         })
                     }
-                }.navigationTitle("Nachzuholende Module")
-                Spacer()
-                List{
-                    ForEach(toDoList, id: \.Modulname){
-                        modul in
-                        TodoRow(semester: modul.Semester, modul: modul.Modulname, professor: modul.Professor, ects: modul.ECTS)
-                    }
-                }
+                    ToDoGrid(module: toDoList)
+                }.navigationTitle("To Do Module")
             }
         }.onAppear{transformData()}
     }
-    func transformData(){
-        toDoList = collection.module.filter{$0.Semester == optionIndex + 1}
+    
+    private func transformData(){
+        toDoList = collection.module.filter{$0.Note == 0 && $0.Semester < optionIndex + 1 }
+        toDoList.sort(by: {$0.Semester < $1.Semester})
     }
 }

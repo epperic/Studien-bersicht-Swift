@@ -17,10 +17,10 @@ struct EditModulView: View {
     
     //Fremdcode: https://www.hackingwithswift.com/quick-start/swiftui/how-to-format-a-textfield-for-numbers
     let decimalFormatter: NumberFormatter = {
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .decimal
-            return formatter
-        }()
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .decimal
+        return formatter
+    }()
     
     init(modul:ModulViewModel) {
         _modulname = State(initialValue: modul.Modulname)
@@ -32,38 +32,34 @@ struct EditModulView: View {
     
     var body: some View{
         NavigationView{
-                Form {
-                    Section(header: Text("Modulname")) {
-                        TextField("Modulname", text: $modulname)
-                    }
-                    Section(header: Text("Professor")) {
-                        TextField("Professor", text: $professor)
-                    }
-                    Section(header: Text("ECTS")) {
-                        TextField("ECTS", value: $ects, formatter: NumberFormatter())
-                    }
-                    Section(header: Text("Note")) {
-                        TextField("Note", value: $note, formatter: decimalFormatter)
-                    }
-                    Section(header: Text("Semester")) {
-                        TextField("Semester", value: $semester, formatter: NumberFormatter())
-                    }
+            Form {
+                Section(header: Text("Modulname")) {
+                    TextField("Modulname", text: $modulname)
                 }
-            }.navigationBarItems(trailing: saveButton)
+                Section(header: Text("Professor")) {
+                    TextField("Professor", text: $professor)
+                }
+                Section(header: Text("ECTS")) {
+                    TextField("ECTS", value: $ects, formatter: NumberFormatter())
+                }
+                Section(header: Text("Note")) {
+                    TextField("Note", value: $note, formatter: decimalFormatter)
+                }
+                Section(header: Text("Semester")) {
+                    TextField("Semester", value: $semester, formatter: NumberFormatter())
+                }
+            }
+        }.navigationBarItems(trailing: saveButton)
         .navigationTitle("Modulübersicht")
     }
     
     private var saveButton: some View {
-            Button(action: onSave) {
-                Text("Save")
-            }
+        Button(action: onSave) {
+            Text("Save")
         }
+    }
     private func onSave(){
-        //Fubnktionsaufruf des Adapters (API Aufruf)
+        //Fubnktionsaufruf des Adapters (API Aufruf) und reload
         self.presentation.wrappedValue.dismiss()
     }
 }
-
-/*Toggle(isOn: $isPrivate) {
-Text("Private Account")
-}*/
