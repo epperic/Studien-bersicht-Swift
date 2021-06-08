@@ -20,6 +20,9 @@
 		5A496EAC266E5D71008175BA /* ModulGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAB266E5D71008175BA /* ModulGrid.swift */; };
 		5A496EAD266E5D71008175BA /* ModulGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAB266E5D71008175BA /* ModulGrid.swift */; };
 		5A496EAE266E5D71008175BA /* ModulGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAB266E5D71008175BA /* ModulGrid.swift */; };
+		5A496EB0266FCCBD008175BA /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAF266FCCBD008175BA /* FirestoreModel.swift */; };
+		5A496EB1266FCCBD008175BA /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAF266FCCBD008175BA /* FirestoreModel.swift */; };
+		5A496EB2266FCCBD008175BA /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAF266FCCBD008175BA /* FirestoreModel.swift */; };
 		5A7BFF8D265EA4DF00B7F307 /* EditModulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFF8C265EA4DF00B7F307 /* EditModulView.swift */; };
 		5A7BFF8F265EBC4100B7F307 /* AddModulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFF8E265EBC4100B7F307 /* AddModulView.swift */; };
 		5A7BFF922665591100B7F307 /* SwiftDataTables in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7BFF912665591100B7F307 /* SwiftDataTables */; };
@@ -68,6 +71,7 @@
 		5A395CDD265D4DCD00BDA632 /* CollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewModel.swift; sourceTree = "<group>"; };
 		5A496EA2266B74CD008175BA /* FirebaseAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAPI.swift; sourceTree = "<group>"; };
 		5A496EAB266E5D71008175BA /* ModulGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulGrid.swift; sourceTree = "<group>"; };
+		5A496EAF266FCCBD008175BA /* FirestoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreModel.swift; sourceTree = "<group>"; };
 		5A7BFF8C265EA4DF00B7F307 /* EditModulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditModulView.swift; sourceTree = "<group>"; };
 		5A7BFF8E265EBC4100B7F307 /* AddModulView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddModulView.swift; sourceTree = "<group>"; };
 		5A86D6A82667BB8C005ECA97 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				5A496EA2266B74CD008175BA /* FirebaseAPI.swift */,
+				5A496EAF266FCCBD008175BA /* FirestoreModel.swift */,
 			);
 			path = StudienuebersichtInfrastructure;
 			sourceTree = "<group>";
@@ -340,6 +345,7 @@
 			files = (
 				5A1A1D8D26557601008DFE4D /* SemesterView.swift in Sources */,
 				5A1A1D8B26557582008DFE4D /* HomeView.swift in Sources */,
+				5A496EB0266FCCBD008175BA /* FirestoreModel.swift in Sources */,
 				5A7BFF8F265EBC4100B7F307 /* AddModulView.swift in Sources */,
 				5A395CDC265D466E00BDA632 /* ModulRow.swift in Sources */,
 				5A395CDA265D462300BDA632 /* ModulViewModel.swift in Sources */,
@@ -361,6 +367,7 @@
 			files = (
 				5A86D6AE2667BCCD005ECA97 /* AppDelegate.swift in Sources */,
 				5A496EAD266E5D71008175BA /* ModulGrid.swift in Sources */,
+				5A496EB1266FCCBD008175BA /* FirestoreModel.swift in Sources */,
 				5A496EA4266B74CD008175BA /* FirebaseAPI.swift in Sources */,
 				5AB8DEA92655606000AB90A8 /* StudienuebersichtTests.swift in Sources */,
 			);
@@ -372,6 +379,7 @@
 			files = (
 				5A86D6AF2667BCCD005ECA97 /* AppDelegate.swift in Sources */,
 				5A496EAE266E5D71008175BA /* ModulGrid.swift in Sources */,
+				5A496EB2266FCCBD008175BA /* FirestoreModel.swift in Sources */,
 				5A496EA5266B74CD008175BA /* FirebaseAPI.swift in Sources */,
 				5AB8DEB42655606000AB90A8 /* StudienuebersichtUITests.swift in Sources */,
 			);
@@ -560,6 +568,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R488V8VYC9;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = StudienuebersichtTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -582,6 +591,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R488V8VYC9;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = StudienuebersichtTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (

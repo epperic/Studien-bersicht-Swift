@@ -26,4 +26,38 @@ class FirebaseAPI{
             }
         }
     }
+    func saveData(apiObj: FirestoreModel, completion: @escaping (Swift.Result<String, Error>) -> Void){
+        let collection = Firestore.firestore().collection("modul")
+        if apiObj.documentID == "" {
+            collection.addDocument(data: apiObj.dictionary){
+                err in
+                if let err = err {
+                    completion(Swift.Result.failure(err))
+                } else {
+                    completion(Swift.Result.success("Document successfully added!"))
+                }
+            }
+        } else {
+            collection.document(apiObj.documentID!).setData(apiObj.dictionary) {
+                err in
+                if let err = err {
+                    completion(Swift.Result.failure(err))
+                } else {
+                    completion(Swift.Result.success("Document successfully overwritten!"))
+                }
+            }
+        }
+    }
+    
+    func deleteData(documentID: String, completion: @escaping (Swift.Result<String, Error>) -> Void){
+        let collection = Firestore.firestore().collection("modul")
+        collection.document(documentID).delete() {
+            err in
+            if let err = err {
+                completion(Swift.Result.failure(err))
+            } else {
+                completion(Swift.Result.success("Document successfully deleted!"))
+            }
+        }
+    }
 }

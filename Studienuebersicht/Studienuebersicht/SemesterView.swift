@@ -11,6 +11,7 @@ struct SemesterView: View {
     @EnvironmentObject var collection : CollectionViewModel
     @State private var editMode = EditMode.inactive
     @State var selection : Int?
+    @State var modulToDelete : ModulViewModel?
     
     var body: some View{
         NavigationView{
@@ -21,7 +22,7 @@ struct SemesterView: View {
                         Section(header: Text("\(index + 1). Semester - Note: Ø\(String(format: "%.2f", collection.calcAvgNote(modulliste: collection.splitsemestermodule[index])))")){
                             ForEach(collection.splitsemestermodule[index], id: \.Id){
                                 modul in
-                                NavigationLink(destination: EditModulView(modul: modul)){
+                                NavigationLink(destination: EditModulView(modul: modul, collection: collection)){
                                     SemesterRow(modul: modul.Modulname, note: modul.Note)
                                 }
                             }.onDelete{onDelete(offsets: $0, section: index)}
@@ -51,10 +52,32 @@ struct SemesterView: View {
     }
     
     private func onDelete(offsets: IndexSet, section: Int) {
-        collection.splitsemestermodule[section].remove(atOffsets: offsets)
+        for index in offsets {
+            modulToDelete = collection.splitsemestermodule[section][index]
+        }
+        FirebaseAPI().deleteData(documentID: modulToDelete!.Id, completion: {
+            switch $0 {
+            case .success(_):
+                reloadData()
+            case let .failure(error):
+                debugPrint(error.localizedDescription)
+            }
+        })
     }
     
     private func onMove(source: IndexSet, destination: Int) {
         collection.splitsemestermodule[0].move(fromOffsets: source, toOffset: destination)
+    }
+    
+    func reloadData(){
+        let api = FirebaseAPI()
+        api.fetchData(completion: {
+            switch $0 {
+            case let .success(items):
+                collection.module = items
+                collection.splitSemesters()
+            case let .failure(error): debugPrint(error)
+            }
+        })
     }
 }
