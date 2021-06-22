@@ -25,9 +25,6 @@
 		5A496EB2266FCCBD008175BA /* FirestoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A496EAF266FCCBD008175BA /* FirestoreModel.swift */; };
 		5A7BFF8D265EA4DF00B7F307 /* EditModulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFF8C265EA4DF00B7F307 /* EditModulView.swift */; };
 		5A7BFF8F265EBC4100B7F307 /* AddModulView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7BFF8E265EBC4100B7F307 /* AddModulView.swift */; };
-		5A7BFF922665591100B7F307 /* SwiftDataTables in Frameworks */ = {isa = PBXBuildFile; productRef = 5A7BFF912665591100B7F307 /* SwiftDataTables */; };
-		5A86D6A12667B75F005ECA97 /* StudienuebersichtCore in Frameworks */ = {isa = PBXBuildFile; productRef = 5A86D6A02667B75F005ECA97 /* StudienuebersichtCore */; };
-		5A86D6A32667B75F005ECA97 /* StudienuebersichtInfrastructure in Frameworks */ = {isa = PBXBuildFile; productRef = 5A86D6A22667B75F005ECA97 /* StudienuebersichtInfrastructure */; };
 		5A86D6A92667BB8C005ECA97 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A86D6A82667BB8C005ECA97 /* GoogleService-Info.plist */; };
 		5A86D6AA2667BB8C005ECA97 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A86D6A82667BB8C005ECA97 /* GoogleService-Info.plist */; };
 		5A86D6AB2667BB8C005ECA97 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A86D6A82667BB8C005ECA97 /* GoogleService-Info.plist */; };
@@ -95,9 +92,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A86D6A12667B75F005ECA97 /* StudienuebersichtCore in Frameworks */,
-				5A86D6A32667B75F005ECA97 /* StudienuebersichtInfrastructure in Frameworks */,
-				5A7BFF922665591100B7F307 /* SwiftDataTables in Frameworks */,
 				5A86D6B42667C6F0005ECA97 /* FirebaseFirestore in Frameworks */,
 				5A86D6B22667C6F0005ECA97 /* FirebaseAuth in Frameworks */,
 			);
@@ -217,9 +211,6 @@
 			);
 			name = Studienuebersicht;
 			packageProductDependencies = (
-				5A7BFF912665591100B7F307 /* SwiftDataTables */,
-				5A86D6A02667B75F005ECA97 /* StudienuebersichtCore */,
-				5A86D6A22667B75F005ECA97 /* StudienuebersichtInfrastructure */,
 				5A86D6B12667C6F0005ECA97 /* FirebaseAuth */,
 				5A86D6B32667C6F0005ECA97 /* FirebaseFirestore */,
 			);
@@ -708,19 +699,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		5A7BFF912665591100B7F307 /* SwiftDataTables */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 5A7BFF902665591100B7F307 /* XCRemoteSwiftPackageReference "SwiftDataTables" */;
-			productName = SwiftDataTables;
-		};
-		5A86D6A02667B75F005ECA97 /* StudienuebersichtCore */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = StudienuebersichtCore;
-		};
-		5A86D6A22667B75F005ECA97 /* StudienuebersichtInfrastructure */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = StudienuebersichtInfrastructure;
-		};
 		5A86D6B12667C6F0005ECA97 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 5A86D6B02667C6F0005ECA97 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

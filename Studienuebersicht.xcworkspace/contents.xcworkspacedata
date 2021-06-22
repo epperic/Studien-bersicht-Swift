@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:StudienuebersichtInfrastructure">
-   </FileRef>
-   <FileRef
-      location = "group:StudienuebersichtCore">
-   </FileRef>
-   <FileRef
       location = "container:Studienuebersicht/Studienuebersicht.xcodeproj">
    </FileRef>
 </Workspace>

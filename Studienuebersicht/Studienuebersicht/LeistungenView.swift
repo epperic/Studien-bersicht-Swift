@@ -12,7 +12,9 @@ struct LeistungenView: View {
     var body: some View{
         NavigationView{
             VStack{
-                LeistungenGrid(module: collection.module, sumECTS: collection.calcECTS(), avgNote: collection.calcAvgNote(modulliste: collection.module))
+                LeistungenGrid(module: collection.module.filter{modul in
+                    return modul.Note != 0.0
+                }, sumECTS: collection.calcECTS(), avgNote: collection.calcAvgNote(modulliste: collection.module))
             }.navigationTitle("Leistungen")
         }
     }
