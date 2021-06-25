@@ -12,6 +12,7 @@ class CollectionViewModel : ObservableObject{
     @Published var splitsemestermodule: [[ModulViewModel]] = []
     
     func splitSemesters(){
+        //Best Answer from Alain T.: https://stackoverflow.com/questions/38532159/splitting-an-array-into-sub-arrays-in-swift/38532767
         splitsemestermodule = Array(Dictionary(grouping: module){$0.Semester}.values)
         splitsemestermodule.sort(by: {$0[0].Semester < $1[0].Semester })
     }

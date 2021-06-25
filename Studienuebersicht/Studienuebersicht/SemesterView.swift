@@ -3,7 +3,7 @@
 //  Studienuebersicht
 //
 //  Created by Eric Epp on 19.05.21.
-//
+// Based on https://www.vadimbulavin.com/add-edit-move-and-drag-and-drop-in-swiftui-list/
 
 import SwiftUI
 
